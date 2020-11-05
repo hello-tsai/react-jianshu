@@ -1,0 +1,2 @@
+export const HANDLE_ACCOUNT_PASSWORD = 'login/HANDLE_ACCOUNT_PASSWORD'
+export const CHANGE_LOGIN = 'header/CHANGE_LOGIN'
