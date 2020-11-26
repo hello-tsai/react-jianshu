@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import { connect } from 'react-redux'
-import {HeaderWrapper, Logo, Nav, NavItem, NavSearch,SearchWrapper, SearchInfo,SearchInfoItem} from './style'
+import {HeaderWrapper, Logo, Nav, NavItem, NavSearch,SearchWrapper, SearchInfo,SearchInfoItem, HeaderContent} from './style'
 import {actionCreators} from './store'
 import { actionCreators as LoginAction } from '../../pages/Login/store'
 import {Link} from "react-router-dom";
@@ -33,40 +33,44 @@ class Header extends Component{
   render() {
     return (
       <HeaderWrapper>
-        <Logo href = '/'/>
-        <Nav>
-          <NavItem className='left'>
-            <div className='active'>首页</div>
-            <div>下载APP</div>
-          </NavItem>
-          <NavSearch>
-            <SearchWrapper>
-              <input
-                onFocus={() => (this.props.focusInput(this.props.list,true))} className={(this.props.focused || this.props.mouseIn)? 'showLong': ''}
-                type="text"
-                onBlur={() => (this.props.focusInput(this.props.list,false))}
-                placeholder='搜索'/>
-              <i className={((this.props.focused || this.props.mouseIn)? 'showLongIcon': '') + ' iconfont iconfangdajing'}
-              />
-              {this.getListArea()}
-            </SearchWrapper>
-          </NavSearch>
-          <NavItem className='right'>
-            {
-              this.props.login?
-                <Link to={'/'} style={{ textDecoration:'none'}}  onClick={this.props.changeLogin}>
-                  <div>退出</div>
-                </Link>
-                :
-                <Link to={'/login'} style={{ textDecoration:'none'}} >
-                  <div>登录</div>
-                </Link>
-            }
-            <div>注册</div>
-            <div><i
-              className='iconfont iconPensyumaobi'/>写文章</div>
-          </NavItem>
-        </Nav>
+        <HeaderContent>
+          <Logo href = '/'/>
+          <Nav>
+            <NavItem className='left'>
+              <div className='active'>首页</div>
+              <div>下载APP</div>
+            </NavItem>
+            <NavSearch>
+              <SearchWrapper>
+                <input
+                  onFocus={() => (this.props.focusInput(this.props.list,true))} className={(this.props.focused || this.props.mouseIn)? 'showLong': ''}
+                  type="text"
+                  onBlur={() => (this.props.focusInput(this.props.list,false))}
+                  placeholder='搜索'/>
+                <i className={((this.props.focused || this.props.mouseIn)? 'showLongIcon': '') + ' iconfont iconfangdajing'}
+                />
+                {this.getListArea()}
+              </SearchWrapper>
+            </NavSearch>
+            <NavItem className='right'>
+              <div><i className='iconfont iconfont-size'/></div>
+              <div ><img className='right-beta' src={require('../../statics/image/nav_jsds_beta-eeb44d165b8ba37680fdb7e65ae17ae4.png')}alt=""/></div>
+              {
+                this.props.login?
+                  <Link to={'/'} style={{ textDecoration:'none'}}  onClick={this.props.changeLogin}>
+                    <div>退出</div>
+                  </Link>
+                  :
+                  <Link to={'/login'} style={{ textDecoration:'none'}} >
+                    <div>登录</div>
+                  </Link>
+              }
+              <div>注册</div>
+              <div><i
+                className='iconfont iconPensyumaobi'/>写文章</div>
+            </NavItem>
+          </Nav>
+        </HeaderContent>
       </HeaderWrapper>
     )
   }

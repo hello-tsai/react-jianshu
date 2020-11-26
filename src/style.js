@@ -27,6 +27,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 \tline-height: 1;
+//background: #3f3f3f;
+//color: #c8c8c8;
 }
 ol, ul {
 \tlist-style: none;
@@ -43,7 +45,7 @@ table {
 \tborder-collapse: collapse;
 \tborder-spacing: 0;
 }
-a,a:link,a:hover,a:visited;a:active{
+a,a:link,a:hover,a:visited,a:active{
   text-decoration: none;
 }
 `

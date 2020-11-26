@@ -4,8 +4,16 @@ import logoPic from '../../statics/image/logo.png'
 export const HeaderWrapper = styled.div`
 height:56px;
 display:flex;
+justify-content: center;
 border-bottom:1px solid #f0f0f0;
 font-family: Microsoft YaHei;
+`
+export const HeaderContent = styled.div`
+  display:flex;
+  justify-content: space-between;
+  min-width: 768px;
+  max-width: 1440px;
+  width: 100%;
 `
 export const Logo = styled.a`
   display:inline-block;
@@ -38,6 +46,13 @@ export const NavItem = styled.div`
     align-items: center;
     color: #969696;
     font-size: 15px;
+    .right-beta {
+      width: 57px;
+      margin: 0 12px;
+    }
+    .iconfont-size{
+      font-size: 24px;
+    }
    }
     &.right div{
     margin-left:15px;
@@ -46,19 +61,19 @@ export const NavItem = styled.div`
     &.right a div{
       margin-right: 18px;
     }
-    &.right>div:nth-of-type(1){
+    &.right>div:nth-of-type(3){
       padding: 10px 22px;
       color: #ea6f5a;
       border: 1px solid rgba(236,97,73,.7);
       border-radius: 20px;
       cursor: pointer;
     }
-    &.right>div:nth-of-type(1):hover{
+    &.right>div:nth-of-type(3):hover{
       color: #ec6149;
       border-color: #ec6149;
       background-color: rgba(236,97,73,.05);
     }
-    &.right>div:nth-of-type(2){
+    &.right>div:nth-of-type(4){
       padding: 10px 22px;
       margin-right: 12px;
       border-radius: 20px;
@@ -66,7 +81,7 @@ export const NavItem = styled.div`
       background-color: #ea6f5a;
       cursor: pointer;
     }
-    &.right>div:nth-of-type(2):hover{
+    &.right>div:nth-of-type(4):hover{
       color: #fff;
       background-color: #ec6149;
     }

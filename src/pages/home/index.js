@@ -14,7 +14,6 @@ class Home extends Component{
       <HomeWrapper>
         <HomeLeft>
           <img src="https://upload.jianshu.io/admin_banners/web_images/4995/af694827b911ab360fe44d5252422109849c5760.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540" alt=""/>
-          <Topic/>
           <List/>
         </HomeLeft>
         <HomeRight>
